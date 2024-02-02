@@ -1,11 +1,10 @@
-def calculate_average(number1, number2):
-    """Calculate the average of two numbers."""
-    average = (number1 + number2) / 2
-    return average
+from gpiozero import LED
+from time import sleep
 
-# Example usage:
-num1 = float(input("Enter the first number: "))
-num2 = float(input("Enter the second number: "))
+led = LED(3)
 
-result = calculate_average(num1, num2)
-print(f"The average of {num1} and {num2} is: {result}")
+while True:
+    led.on()
+    sleep(1)
+    led.off()
+    sleep(1)
