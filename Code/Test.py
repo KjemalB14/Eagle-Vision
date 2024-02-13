@@ -1,12 +1,7 @@
-from gpiozero import LED
-from time import sleep
+from picamera2 import Picamer2, Preview
+import cv2 as cv
+import time
 
-#set led input to pin 17
-led = LED(17)
-
-#setting the led up to turn off and on every second
-while True:
-    led.on()
-    sleep(1)
-    led.off()
-    sleep(1)
+img = cv.imread("/home/ENKH/Downloads/2024-ferrari-sf90-xx-stradale-122-654a66978f827.jpg")
+cv.imshow("display", img)
+k = cv.waitKey(0)
